@@ -1,36 +1,48 @@
 /*
 developed by Moo.
-*/
+ */
+//parent class
 package math.game;
+
 import java.util.*;
+
 public class MathData {
 //    attr
+
     private int bilRandom, skor, nyawa, level;
     public int hasilPenjumlahan, hasilPengurangan;
 //   encapsulation
-    public void setLevel(int lvl){
+
+    public void setLevel(int lvl) {
         level = lvl;
     }
-    public int getLevel(){
+
+    public int getLevel() {
         return level;
     }
-    public void setSkor(int sk){
+
+    public void setSkor(int sk) {
         skor = sk;
     }
-    public int getSkor(){
+
+    public int getSkor() {
         return skor;
     }
-    public void setNyawa(int ny){
+
+    public void setNyawa(int ny) {
         nyawa = ny;
     }
-    public int getNyawa(){
+
+    public int getNyawa() {
         return nyawa;
     }
-    public void setRandom(int range){
+
+    public void setRandom(int range) {
         Random b1 = new Random();
         bilRandom = b1.nextInt(range);
     }
-    public int getRandom(){
+
+    public int getRandom() {
         return bilRandom;
     }
 }

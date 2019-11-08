@@ -39,10 +39,10 @@ public class MathPrograms {
                 System.out.println("Masukkan Score Terakhir : ");
                 last_score = in.nextInt();
                 cplus.Play(last_score, last_level);
-            }else if(pilihan_menu_dua == 2){
+            } else if (pilihan_menu_dua == 2) {
                 cplus.Play();
             }
-        }else if(pilihan_menu == 2){
+        } else if (pilihan_menu == 2) {
             System.out.println("****************************");
             System.out.println("     Math - Pengurangan     ");
             System.out.println("****************************");
@@ -59,11 +59,11 @@ public class MathPrograms {
                 System.out.println("Masukkan Score Terakhir : ");
                 last_score = in.nextInt();
                 cmin.Play(last_score, last_level);
-            }else if(pilihan_menu_dua == 2){
+            } else if (pilihan_menu_dua == 2) {
                 cmin.Play();
             }
-        }else{
-            
+        } else {
+
         }
 
     }
