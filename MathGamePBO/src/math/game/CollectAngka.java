@@ -1,3 +1,6 @@
+/*
+developed by Moo.
+*/
 package math.game;
 import java.util.*;
 public class CollectAngka{
