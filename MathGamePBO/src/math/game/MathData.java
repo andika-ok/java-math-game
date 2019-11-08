@@ -7,7 +7,7 @@ public class MathData {
 //    attr
     private int bilRandom, skor, nyawa, level;
     public int hasilPenjumlahan, hasilPengurangan;
-   
+//   encapsulation
     public void setLevel(int lvl){
         level = lvl;
     }
