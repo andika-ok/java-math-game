@@ -5,8 +5,10 @@ package math.game;
 
 import java.util.Scanner;
 //inheritance
+
 public class MathSubClass extends MathMainClass {
 //overrinding
+
     @Override
     public void Play() {
         MathSubClass data = new MathSubClass();
