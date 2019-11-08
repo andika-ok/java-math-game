@@ -1,7 +1,7 @@
 package math.game;
 import java.util.*;
 public class CollectAngka{
-    public void PlayMath() {
+    public static void main(String[] args) {
         Scanner in = new Scanner(System.in);
         Penjumlahan op = new Penjumlahan();
         System.out.println("****************************");
@@ -16,6 +16,5 @@ public class CollectAngka{
         if(choice==1){
             op.Play();
         }
-        
     }
 }
