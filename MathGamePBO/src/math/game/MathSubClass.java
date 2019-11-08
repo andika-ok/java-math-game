@@ -3,12 +3,12 @@ developed by Moo.
 */
 package math.game;
 import java.util.Scanner;
-public class Pengurangan extends Penjumlahan {
+public class MathSubClass extends MathMainClass {
     @Override
     public void Play(){
-        Penjumlahan data = new Penjumlahan();
-        Penjumlahan ar1 = new Penjumlahan();
-        Penjumlahan ar2 = new Penjumlahan();
+        MathMainClass data = new MathMainClass();
+        MathMainClass ar1 = new MathMainClass();
+        MathMainClass ar2 = new MathMainClass();
         Scanner in = new Scanner(System.in);
         Scanner un = new Scanner(System.in);
         System.out.println("Masukkan nama kamu :");

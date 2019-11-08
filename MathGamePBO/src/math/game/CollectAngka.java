@@ -6,7 +6,7 @@ import java.util.*;
 public class CollectAngka{
     public static void main(String[] args) {
         Scanner in = new Scanner(System.in);
-        Penjumlahan op = new Penjumlahan();
+        MathMainClass op = new MathMainClass();
         System.out.println("****************************");
         System.out.println("    Math Game Kelompok 3    ");
         System.out.println("****************************");
