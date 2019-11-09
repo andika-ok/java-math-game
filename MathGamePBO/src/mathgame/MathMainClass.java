@@ -1,21 +1,24 @@
 /*
 developed by Moo.
  */
-package math.game;
-
-import java.util.Scanner;
+package mathgame;
+import java.text.*;
+import java.util.*;
 //inheritance
 
-public class MathSubClass extends MathMainClass {
-//overrinding
-
-    @Override
+public class MathMainClass extends MathData {
+    protected String number_display1, number_display2;
     public void Play() {
-        MathSubClass data = new MathSubClass();
-        MathSubClass ar1 = new MathSubClass();
-        MathSubClass ar2 = new MathSubClass();
+//      Instansiasi
+        MathNumberFormat mf1 = new MathNumberFormat();
+        MathNumberFormat mf2 = new MathNumberFormat();
+        MathMainClass data = new MathMainClass();
+        MathMainClass ar1 = new MathMainClass();
+        MathMainClass ar2 = new MathMainClass();
         Scanner in = new Scanner(System.in);
         Scanner un = new Scanner(System.in);
+//        
+//
         System.out.println("Masukkan nama kamu :");
         String username = un.next();
         data.setLevel(1);
@@ -29,17 +32,23 @@ public class MathSubClass extends MathMainClass {
         while (true) {
             while (score >= 0 && score < 101) {
                 if (lives > 0) {
-                    System.out.println("****************************");
-                    System.out.println("     Math - Pengurangan     ");
-                    System.out.println("****************************");
                     ar1.setRandom(11);
                     ar2.setRandom(11);
                     int bilangan1 = ar1.getRandom();
                     int bilangan2 = ar2.getRandom();
-                    System.out.println("Berapakah hasil dari " + bilangan1 + " - " + bilangan2 + " ?");
+                    mf1.NumberFormat(bilangan1);
+                    mf2.NumberFormat(bilangan2);
+                    number_display1 = mf1.getFormat();
+                    number_display2 = mf2.getFormat();
+                    
+//                    User Interface
+                    System.out.println("****************************");
+                    System.out.println("     Math - Penjumlahan     ");
+                    System.out.println("****************************");
+                    System.out.println("Berapakah hasil dari " + number_display1 + " + " + number_display2 + " ?");
                     int angka = in.nextInt();
-                    hasilPengurangan = bilangan1 - bilangan2;
-                    if (angka == hasilPengurangan) {
+                    hasilPenjumlahan = bilangan1 + bilangan2;
+                    if (angka == hasilPenjumlahan) {
                         score = score + 4;
                         System.out.println("[Hallo " + username + "][Score: " + score + "][Lives: " + lives + "][level: " + lvl + "]");
                         System.out.println("___________________________________");
@@ -61,17 +70,23 @@ public class MathSubClass extends MathMainClass {
             }
             while (score > 100 && score < 201) {
                 if (lives > 0) {
-                    System.out.println("****************************");
-                    System.out.println("     Math - Pengurangan     ");
-                    System.out.println("****************************");
                     ar1.setRandom(11);
                     ar2.setRandom(11);
                     int bilangan1 = -1 * (1 + ar1.getRandom());
                     int bilangan2 = -1 * (1 + ar2.getRandom());
-                    System.out.println("Berapakah hasil dari " + bilangan1 + " - " + bilangan2 + " ?");
+                    mf1.NumberFormat(bilangan1);
+                    mf2.NumberFormat(bilangan2);
+                    number_display1 = mf1.getFormat();
+                    number_display2 = mf2.getFormat();
+                    
+//                    UserInterface
+                    System.out.println("****************************");
+                    System.out.println("     Math - Penjumlahan     ");
+                    System.out.println("****************************");
+                    System.out.println("Berapakah hasil dari " +number_display1+ " + " +number_display2+ " ?");
                     int angka = in.nextInt();
-                    hasilPengurangan = bilangan1 - bilangan2;
-                    if (angka == hasilPengurangan) {
+                    hasilPenjumlahan = bilangan1 + bilangan2;
+                    if (angka == hasilPenjumlahan) {
                         score = score + 4;
                         System.out.println("[Hallo " + username + "][Score: " + score + "][Lives: " + lives + "][level: " + lvl2 + "]");
                         System.out.println("___________________________________");
@@ -89,17 +104,23 @@ public class MathSubClass extends MathMainClass {
             }
             while (score > 200 && score <= 300) {
                 if (lives > 0) {
-                    System.out.println("****************************");
-                    System.out.println("     Math - Pengurangan     ");
-                    System.out.println("****************************");
                     ar1.setRandom(20);
                     ar2.setRandom(20);
                     int bilangan1 = ar1.getRandom() - 10;
                     int bilangan2 = ar2.getRandom() - 10;
-                    System.out.println("Berapakah hasil dari " + bilangan1 + " - " + bilangan2 + " ?");
+                    mf1.NumberFormat(bilangan1);
+                    mf2.NumberFormat(bilangan2);
+                    number_display1 = mf1.getFormat();
+                    number_display2 = mf2.getFormat();
+                    
+//                    User Interface
+                    System.out.println("****************************");
+                    System.out.println("     Math - Penjumlahan     ");
+                    System.out.println("****************************");
+                    System.out.println("Berapakah hasil dari " + number_display1 + " + " + number_display2 + " ?");
                     int angka = in.nextInt();
-                    hasilPengurangan = bilangan1 - bilangan2;
-                    if (angka == hasilPengurangan) {
+                    hasilPenjumlahan = bilangan1 + bilangan2;
+                    if (angka == hasilPenjumlahan) {
                         score = score + 4;
                         System.out.println("[Hallo " + username + "][Score: " + score + "][Lives: " + lives + "][level: " + lvl3 + "]");
                         System.out.println("___________________________________");
@@ -115,7 +136,7 @@ public class MathSubClass extends MathMainClass {
                     break;
                 }
                 if (score > 300) {
-                    System.out.println("[Selamat " + username + ", Anda telah menyelesaikan soal pengurangan dengan baik. Terimakasih sudah bermain :)]");
+                    System.out.println("[Selamat " + username + ", Anda telah menyelesaikan soal penjumlahan dengan baik. Silakan dicoba soal pengurangan ya]");
                     break;
                 }
             }
@@ -125,11 +146,16 @@ public class MathSubClass extends MathMainClass {
 //    Overloading method
 
     public void Play(int s, int l) {
-        MathSubClass data = new MathSubClass();
-        MathSubClass ar1 = new MathSubClass();
-        MathSubClass ar2 = new MathSubClass();
+//        Instansiasi
+        MathNumberFormat mf1 = new MathNumberFormat();
+        MathNumberFormat mf2 = new MathNumberFormat();
+        MathMainClass data = new MathMainClass();
+        MathMainClass ar1 = new MathMainClass();
+        MathMainClass ar2 = new MathMainClass();
         Scanner in = new Scanner(System.in);
         Scanner un = new Scanner(System.in);
+//        
+//
         System.out.println("Masukkan nama kamu :");
         String username = un.next();
         data.setLevel(l);
@@ -141,17 +167,22 @@ public class MathSubClass extends MathMainClass {
         while (true) {
             while (score >= 0 && score < 101) {
                 if (lives > 0) {
-                    System.out.println("****************************");
-                    System.out.println("     Math - Pengurangan     ");
-                    System.out.println("****************************");
                     ar1.setRandom(11);
                     ar2.setRandom(11);
                     int bilangan1 = ar1.getRandom();
                     int bilangan2 = ar2.getRandom();
-                    System.out.println("Berapakah hasil dari " + bilangan1 + " - " + bilangan2 + " ?");
+                    mf1.NumberFormat(bilangan1);
+                    mf2.NumberFormat(bilangan2);
+                    number_display1 = mf1.getFormat();
+                    number_display2 = mf2.getFormat();
+//                    User Interface
+                    System.out.println("****************************");
+                    System.out.println("     Math - Penjumlahan     ");
+                    System.out.println("****************************");
+                    System.out.println("Berapakah hasil dari " + number_display1 + " + " + number_display2 + " ?");
                     int angka = in.nextInt();
-                    hasilPengurangan = bilangan1 - bilangan2;
-                    if (angka == hasilPengurangan) {
+                    hasilPenjumlahan = bilangan1 + bilangan2;
+                    if (angka == hasilPenjumlahan) {
                         score = score + 4;
                         System.out.println("[Hallo " + username + "][Score: " + score + "][Lives: " + lives + "][level: " + lvl + "]");
                         System.out.println("___________________________________");
@@ -173,17 +204,22 @@ public class MathSubClass extends MathMainClass {
             }
             while (score > 100 && score < 201) {
                 if (lives > 0) {
-                    System.out.println("****************************");
-                    System.out.println("     Math - Pengurangan     ");
-                    System.out.println("****************************");
                     ar1.setRandom(11);
                     ar2.setRandom(11);
                     int bilangan1 = -1 * (1 + ar1.getRandom());
                     int bilangan2 = -1 * (1 + ar2.getRandom());
-                    System.out.println("Berapakah hasil dari " + bilangan1 + " - " + bilangan2 + " ?");
+                    mf1.NumberFormat(bilangan1);
+                    mf2.NumberFormat(bilangan2);
+                    number_display1 = mf1.getFormat();
+                    number_display2 = mf2.getFormat();
+//                    
+                    System.out.println("****************************");
+                    System.out.println("     Math - Penjumlahan     ");
+                    System.out.println("****************************");
+                    System.out.println("Berapakah hasil dari " + number_display1 + " + " + number_display2 + " ?");
                     int angka = in.nextInt();
-                    hasilPengurangan = bilangan1 - bilangan2;
-                    if (angka == hasilPengurangan) {
+                    hasilPenjumlahan = bilangan1 + bilangan2;
+                    if (angka == hasilPenjumlahan) {
                         score = score + 4;
                         System.out.println("[Hallo " + username + "][Score: " + score + "][Lives: " + lives + "][level: " + lvl + "]");
                         System.out.println("___________________________________");
@@ -201,17 +237,22 @@ public class MathSubClass extends MathMainClass {
             }
             while (score > 200 && score <= 300) {
                 if (lives > 0) {
-                    System.out.println("****************************");
-                    System.out.println("     Math - Pengurangan     ");
-                    System.out.println("****************************");
                     ar1.setRandom(20);
                     ar2.setRandom(20);
                     int bilangan1 = ar1.getRandom() - 10;
                     int bilangan2 = ar2.getRandom() - 10;
-                    System.out.println("Berapakah hasil dari " + bilangan1 + " - " + bilangan2 + " ?");
+                    mf1.NumberFormat(bilangan1);
+                    mf2.NumberFormat(bilangan2);
+                    number_display1 = mf1.getFormat();
+                    number_display2 = mf2.getFormat();
+//                    
+                    System.out.println("****************************");
+                    System.out.println("     Math - Penjumlahan     ");
+                    System.out.println("****************************");
+                    System.out.println("Berapakah hasil dari " + number_display1 + " + " + number_display2 + " ?");
                     int angka = in.nextInt();
-                    hasilPengurangan = bilangan1 - bilangan2;
-                    if (angka == hasilPengurangan) {
+                    hasilPenjumlahan = bilangan1 + bilangan2;
+                    if (angka == hasilPenjumlahan) {
                         score = score + 4;
                         System.out.println("[Hallo " + username + "][Score: " + score + "][Lives: " + lives + "][level: " + lvl + "]");
                         System.out.println("___________________________________");
@@ -227,7 +268,7 @@ public class MathSubClass extends MathMainClass {
                     break;
                 }
                 if (score > 300) {
-                    System.out.println("[Selamat " + username + ", Anda telah menyelesaikan soal pengurangan dengan baik. Terimakasih sudah bermain :)]");
+                    System.out.println("[Selamat " + username + ", Anda telah menyelesaikan soal penjumlahan dengan baik. Silakan dicoba soal pengurangan ya]");
                     break;
                 }
             }

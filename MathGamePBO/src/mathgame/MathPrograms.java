@@ -1,7 +1,7 @@
 /*
 developed by Moo.
  */
-package math.game;
+package mathgame;
 
 import java.util.*;
 

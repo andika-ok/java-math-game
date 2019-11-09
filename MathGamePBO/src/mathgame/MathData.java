@@ -2,7 +2,7 @@
 developed by Moo.
  */
 //parent class
-package math.game;
+package mathgame;
 
 import java.util.*;
 

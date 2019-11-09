@@ -2,7 +2,7 @@
 developed by Moo.
  */
 // main class
-package math.game;
+package mathgame;
 
 public class PlayMath {
 
