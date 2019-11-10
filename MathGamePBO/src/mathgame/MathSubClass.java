@@ -141,6 +141,7 @@ public class MathSubClass extends MathMainClass {
     }
 //    Overloading method
 
+    @Override
     public void Play(int s, int l) {
 //        Instansiasi
         MathNumberFormat mf1 = new MathNumberFormat();
