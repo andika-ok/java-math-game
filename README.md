@@ -11,3 +11,4 @@
 * Download as zip in GameDist
 * Extract the zip
 * Play via Play.bat if youre on Windows PC
+* If you're using Other OS you can download JRE then type "java -jar MathGamePBO.jar" in your game directory
