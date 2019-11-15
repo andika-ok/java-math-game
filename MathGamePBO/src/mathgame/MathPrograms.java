@@ -1,5 +1,6 @@
 /*
-developed by Moo.
+author andika
+developed by Moo
  */
 package mathgame;
 
