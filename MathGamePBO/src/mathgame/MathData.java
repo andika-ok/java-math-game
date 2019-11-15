@@ -7,7 +7,7 @@ package mathgame;
 import java.util.*;
 
 public class MathData {
-//    attr
+//attr
 
     private int bilRandom, skor, nyawa, level;
     public int hasilPenjumlahan, hasilPengurangan;
